@@ -1,0 +1,296 @@
+    /* ---------- GLOBAL DESIGN SYSTEM (CUSTOM VARIABLES) ---------- */
+    :root {
+      --bg-dark: #0f172a;
+      --bg-card: #1e293b;
+      --accent: #38bdf8;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border: #334155;
+      --transition-smooth: all 0.25s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      --shadow-premium: 0 25px 45px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(56, 189, 248, 0.08) inset;
+      --shadow-hover: 0 30px 55px -15px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(56, 189, 248, 0.2) inset;
+    }
+
+
+    /* Card container with smooth entrance animation (pure CSS) */
+    .signup-container {
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+      animation: cardFloatUp 0.55s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards;
+    }
+
+    @keyframes cardFloatUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.97);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    /* Modern card: deep, rich background with subtle glass border */
+    .signup-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 2rem;
+      box-shadow: var(--shadow-premium);
+      backdrop-filter: blur(0px);
+      transition: var(--transition-smooth);
+    }
+
+    .signup-card:hover {
+      box-shadow: var(--shadow-hover);
+      border-color: rgba(56, 189, 248, 0.25);
+    }
+
+    /* Logo / brand icon area */
+    .brand-icon {
+      background: rgba(56, 189, 248, 0.12);
+      width: 70px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 1.5rem;
+      margin: 0 auto 1rem;
+      transition: var(--transition-smooth);
+    }
+
+    .brand-icon i {
+      font-size: 2.3rem;
+      color: var(--accent);
+      transition: var(--transition-smooth);
+    }
+
+    .signup-card:hover .brand-icon {
+      background: rgba(56, 189, 248, 0.2);
+      transform: scale(1.02);
+    }
+
+    /* Typography – clean and modern */
+    .brand-title {
+      font-weight: 800;
+      font-size: 2rem;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, var(--text-main) 0%, #cbd5e6 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-bottom: 0.25rem;
+    }
+
+    .brand-sub {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 450;
+      letter-spacing: 0.2px;
+    }
+
+    /* Form labels – uppercase style for premium feel */
+    .form-label {
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.3px;
+      color: var(--text-main);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      opacity: 0.85;
+    }
+
+    /* Input fields: sleek, dark, with smooth transitions */
+    .form-control {
+      background-color: #0f172a;
+      border: 1.5px solid var(--border);
+      border-radius: 1rem;
+      padding: 0.8rem 1rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-main);
+      transition: var(--transition-smooth);
+      box-shadow: none;
+    }
+
+    .form-control:focus {
+      border-color: var(--accent);
+      outline: none;
+      box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.2);
+      background-color: #0f172a;
+      color: white;
+    }
+
+    /* Placeholder styling – elegant and readable */
+    .form-control::placeholder {
+      color: #5c6f8c;
+      font-weight: 400;
+      font-size: 0.85rem;
+    }
+
+    /* Input hover effect */
+    .form-control:hover {
+      border-color: #475569;
+    }
+
+    /* Signup button – accent color with depth and micro-interaction */
+    .btn-signup {
+      background: var(--accent);
+      border: none;
+      border-radius: 1rem;
+      padding: 0.85rem 1rem;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.2px;
+      color: #0f172a;
+      transition: var(--transition-smooth);
+      width: 100%;
+      box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+    }
+
+    .btn-signup i {
+      font-size: 1.1rem;
+      transition: transform 0.2s ease;
+    }
+
+    .btn-signup:hover {
+      background: #0ea5e9;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px -5px rgba(56, 189, 248, 0.45);
+      color: #020617;
+    }
+
+    .btn-signup:hover i {
+      transform: translateX(3px);
+    }
+
+    .btn-signup:active {
+      transform: translateY(1px);
+    }
+
+    /* Login button (outline style – matches theme) */
+    .btn-login-outline {
+      background: transparent;
+      border: 1.5px solid var(--border);
+      border-radius: 1rem;
+      padding: 0.7rem 1rem;
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--text-main);
+      transition: var(--transition-smooth);
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .btn-login-outline i {
+      font-size: 1rem;
+      color: var(--text-muted);
+      transition: var(--transition-smooth);
+    }
+
+    .btn-login-outline:hover {
+      border-color: var(--accent);
+      background: rgba(56, 189, 248, 0.08);
+      color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .btn-login-outline:hover i {
+      color: var(--accent);
+    }
+
+    /* Divider for visual separation */
+    .divider-custom {
+      margin: 1.8rem 0 1.2rem;
+      position: relative;
+    }
+
+    .divider-custom hr {
+      background-color: var(--border);
+      opacity: 0.6;
+      margin: 0;
+    }
+
+    /* Text for "Already have an account?" */
+    .login-prompt-text {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+
+    /* Additional small footer note (polish) */
+    .terms-note {
+      font-size: 0.7rem;
+      letter-spacing: 0.2px;
+      color: #64748b;
+      margin-top: 1.2rem;
+      text-align: center;
+    }
+
+    .terms-note a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: var(--transition-smooth);
+    }
+
+    .terms-note a:hover {
+      text-decoration: underline;
+      color: #7dd3fc;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 560px) {
+      .signup-card {
+        border-radius: 1.5rem;
+      }
+      .brand-title {
+        font-size: 1.75rem;
+      }
+      .signup-container {
+        max-width: 95%;
+      }
+      .form-control {
+        padding: 0.7rem 0.9rem;
+      }
+      .btn-signup, .btn-login-outline {
+        padding: 0.7rem 0.9rem;
+      }
+      .brand-icon {
+        width: 60px;
+        height: 60px;
+      }
+      .brand-icon i {
+        font-size: 2rem;
+      }
+    }
+
+    /* Focus accessibility + removal of default outline for custom glow */
+    button:focus-visible, .form-control:focus {
+      outline: none;
+    }
+
+    /* Card inner spacing */
+    .card-body-custom {
+      padding: 2rem;
+    }
+
+    @media (max-width: 480px) {
+      .card-body-custom {
+        padding: 1.5rem;
+      }
+    }
+
+    /* additional micro: subtle transition for login link */
+    .btn-login-outline:active {
+      transform: translateY(1px);
+    }

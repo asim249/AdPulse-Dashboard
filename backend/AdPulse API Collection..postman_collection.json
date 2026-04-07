@@ -1,0 +1,412 @@
+{
+  "info": {
+    "_postman_id": "a365f669-f617-4c99-a038-045fe2f4a9d8",
+    "name": "AdPulse API Collection.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "47439749",
+    "_collection_link": "https://go.postman.co/collection/47439749-a365f669-f617-4c99-a038-045fe2f4a9d8?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Register User",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "email",
+            "value": "asim@gmail.com",
+            "type": "text"
+          },
+          {
+            "key": "password",
+            "value": "asdf",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "username",
+              "value": "admin",
+              "type": "text",
+              "uuid": "333ea503-b985-4c00-8b03-b5e21c8647fb"
+            },
+            {
+              "key": "email",
+              "value": "admin@gmail.com",
+              "type": "text",
+              "uuid": "05be33c5-a990-4c44-805a-ce62b3e30754"
+            },
+            {
+              "key": "password",
+              "value": "asdf",
+              "type": "text",
+              "uuid": "194f72d1-5ad5-42f9-afe0-e9a34e3feaec"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:2000/api/auth/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "2000",
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login User",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YjY5YWM2ODA0YTA0ZmI0MGZjZWYzNCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzczNTc2OTY3LCJleHAiOjE3NzM1ODA1Njd9.GW04PfZRg2785KKzm6NqP2wT8DIeYVj6Zq_4FBnZEzk",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "email",
+              "value": "admin@gmail.com",
+              "type": "text",
+              "uuid": "92e350a1-092e-4e3a-97a2-b93e2a5f1344"
+            },
+            {
+              "key": "password",
+              "value": "asdf",
+              "type": "text",
+              "uuid": "5b996dc7-b47d-42fd-a626-eab1cb105889"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:2000/api/auth/login?email=admin@gmail.com&password=asdf",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "2000",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ],
+          "query": [
+            {
+              "key": "email",
+              "value": "admin@gmail.com"
+            },
+            {
+              "key": "password",
+              "value": "asdf"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Logout",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "d1daa446-c48a-4d26-9fb3-5f6f08846e79",
+              "src": "/C:/Users/asim/Desktop/CVs/result.pdf"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:2000/api/auth/logout",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "2000",
+          "path": [
+            "api",
+            "auth",
+            "logout"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get all ad data",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:2000/api/campaigns/getAll",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "2000",
+          "path": [
+            "api",
+            "campaigns",
+            "getAll"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create compaign",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "name",
+              "value": "Asim Mir",
+              "type": "text",
+              "uuid": "26199951-9fcb-4c33-925a-f3040cd29fb2"
+            },
+            {
+              "key": "client",
+              "value": "asim",
+              "type": "text",
+              "uuid": "95256b0b-e8c9-4f7e-8ab4-4c1287c1fb38"
+            },
+            {
+              "key": "status",
+              "value": "active",
+              "type": "text",
+              "uuid": "534d40aa-d119-436d-bf6c-08cd43e7c063"
+            },
+            {
+              "key": "budget",
+              "value": "5000",
+              "type": "text",
+              "uuid": "028ebbb2-102e-4642-bd6f-95af3caa9062"
+            },
+            {
+              "key": "spend",
+              "value": "1000",
+              "type": "text",
+              "uuid": "f6603f59-4cbc-4207-849d-018fbaab644f"
+            },
+            {
+              "key": "impressions",
+              "value": "300",
+              "type": "text",
+              "uuid": "6a8bdd15-c483-4c02-9de1-8def1e36fe18"
+            },
+            {
+              "key": "clicks",
+              "value": "100",
+              "type": "text",
+              "uuid": "56276480-83f7-486b-90e6-dd7f355263b7"
+            },
+            {
+              "key": "conversions",
+              "value": "450",
+              "type": "text",
+              "uuid": "7632e4af-d388-48da-8065-d81e1ddf04fa"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:2000/api/campaigns/create",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "2000",
+          "path": [
+            "api",
+            "campaigns",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update user data",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "spend",
+              "value": "1600",
+              "type": "text",
+              "uuid": "bd96fc0d-5baa-436a-8cd2-92dd0974c2d9"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:2000/api/campaigns/update/69d2a742a8e011ecdb04f2ee?spend=1500",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "2000",
+          "path": [
+            "api",
+            "campaigns",
+            "update",
+            "69d2a742a8e011ecdb04f2ee"
+          ],
+          "query": [
+            {
+              "key": "spend",
+              "value": "1500"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete compaign",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:2000/api/campaigns/delete/69d2a4c27d67e2837e2c5dc1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "2000",
+          "path": [
+            "api",
+            "campaigns",
+            "delete",
+            "69d2a4c27d67e2837e2c5dc1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Generate breif from ai",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "name",
+              "value": "Asim Mir",
+              "type": "text",
+              "uuid": "e6bdda7b-a46f-4129-a3e3-e9a3de73b0ed"
+            },
+            {
+              "key": "industry",
+              "value": "Beauty & Skincare",
+              "type": "text",
+              "uuid": "97652408-dda6-4332-8223-77400535c88b"
+            },
+            {
+              "key": "objective",
+              "value": "Conversion",
+              "type": "text",
+              "uuid": "fc5e746f-8ba1-4dfe-91a0-171ddfd6e4af"
+            },
+            {
+              "key": "budget",
+              "value": "50000",
+              "type": "text",
+              "uuid": "d604d226-0571-4b1e-8b35-f3af6a956234"
+            },
+            {
+              "key": "targetAudience",
+              "value": "Women aged 20-35 interested in organic products",
+              "type": "text",
+              "uuid": "74c2745d-1a7d-4977-a91a-3a3c5055ccf2"
+            },
+            {
+              "key": "tone",
+              "value": "Elegent",
+              "type": "text",
+              "uuid": "35c5e3c9-5261-40c8-8b1f-c764108697cf"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:2000/api/ai/generateBrief",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "2000",
+          "path": [
+            "api",
+            "ai",
+            "generateBrief"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "generate copy",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "productName",
+              "value": "Beauty & Skincare",
+              "type": "text",
+              "uuid": "34e060f2-181f-432f-bf8e-e7ae4acd41c7"
+            },
+            {
+              "key": "tone",
+              "value": "Elegent",
+              "type": "text",
+              "uuid": "d5e61774-af98-43ac-9de5-4eb70a5bf683"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:2000/api/ai/generateCopy",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "2000",
+          "path": [
+            "api",
+            "ai",
+            "generateCopy"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
