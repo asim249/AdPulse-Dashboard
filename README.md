@@ -66,14 +66,21 @@ npm start
 ### 📁 Project Structure
 
 backend/
+ 
  ├── controllers/    # Business logic
+
  ├── models/         # MongoDB schemas
+ 
  ├── routes/         # API endpoints
+ 
  ├── middleware/     # Authentication & security
+ 
  └── docs/           # Postman collection
 
 frontend/
+ 
  └── src/
+ 
      ├── components/ # Reusable UI components 
 
 ---
